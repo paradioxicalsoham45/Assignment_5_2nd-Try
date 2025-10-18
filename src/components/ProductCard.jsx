@@ -16,7 +16,7 @@ const ProductCard = () => {
             setOnline(!online)
         }, 2000);
     };
-    // const DeviceOnline = () => setOnline(true);
+    
     const DeviceOnline = () => {
         setLoading(true)
         setTimeout(() => {
@@ -36,7 +36,7 @@ const ProductCard = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center h-screen bg-black text-white">
+      <div className="flex justify-center items-center h-screen bg-black text-white text-3xl">
         Loading ...
       </div>
     );
@@ -44,7 +44,7 @@ const ProductCard = () => {
 
   if (!online) {
     return (
-      <div className="flex justify-center items-center h-screen bg-black text-white">
+      <div className="flex justify-center items-center h-screen bg-black text-white text-3xl">
         No Internet ...
       </div>
     );
@@ -52,7 +52,7 @@ const ProductCard = () => {
 
   if (error) {
     return (
-      <div className="flex justify-center items-center h-screen bg-black text-white">
+      <div className="flex justify-center items-center h-screen bg-black text-white text-3xl">
         <h1>Error:- Failed to fetch</h1>
       </div>
     );
